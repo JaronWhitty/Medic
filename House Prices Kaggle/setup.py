@@ -12,7 +12,6 @@ setup(name='Housing',
       tests_require=['pytest', 'python-coveralls'],
       install_requires=[
           "pandas",
-          "numpy",
           "sklearn",
           "numpy",
           "scipy"
