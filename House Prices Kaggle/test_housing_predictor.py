@@ -1,0 +1,35 @@
+import pytest 
+import pandas as pd
+import housing_predictor as hp
+
+
+@pytest.fixture
+def set_up_feature():
+    test = 'test.csv'
+    train = 'train.csv'
+    return test, train
+    
+def test_feature_engineering(set_up_feature):
+    test, train = set_up_feature
+
+    assert not pd.read_csv(test).empty
+    assert type(pd.read_csv(test)) == pd.DataFrame
+    housing_test = pd.read_csv(test)
+    housing_train = pd.read_csv(train)
+    assert not housing_test.empty
+    assert not housing_train.empty
+    #with pytest.raises(TypeError) as excinfo:
+        #hp.feature_engineering(5,'test.csv')
+    #assert excinfo.value.args[0] == "inputs must be strings!"
+    assert type(housing_train) == pd.core.frame.DataFrame
+    assert type(housing_test) == pd.core.frame.DataFrame
+    assert housing_train.shape == (1460, 81)
+    assert housing_test.shape == (1459, 80)
+  
+    
+    
+
+
+    
+        
+
