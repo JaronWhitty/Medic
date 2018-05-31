@@ -11,7 +11,7 @@ def set_up_feature():
     
 def test_feature_engineering(set_up_feature):
     test, train = set_up_feature
-
+    final_train, final_test, train_ID = hp.feature_engineering(train, train)
     assert not pd.read_csv(test).empty
     assert type(pd.read_csv(test)) == pd.DataFrame
     housing_test = pd.read_csv(test)
@@ -26,10 +26,15 @@ def test_feature_engineering(set_up_feature):
     assert housing_train.shape == (1460, 81)
     assert housing_test.shape == (1459, 80)
   
+@pytest.fixture
+def set_up_prediction():
+    train, test, train_ID = hp.feature_engineering('train.csv', 'test.csv')
+    return train, test, train_ID
     
-    
-
-
+def test_prediction_maker(set_up_prediction):
+    train, test, test_ID = set_up_prediction
+    hp.prediction_maker('testing.csv', train, test, test_ID)
+    assert not pd.read_csv('testing.csv').empty
     
         
 
