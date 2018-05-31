@@ -1,0 +1,48 @@
+actionid: tox
+msg: packaging
+cmdargs: ['c:\\users\\newvistas\\anaconda3\\python.exe', local('C:\\Users\\NewVistas\\Documents\\Medic\\setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('C:\\Users\\NewVistas\\Documents\\Medic\\.tox\\dist')]
+
+running sdist
+running egg_info
+creating Housing.egg-info
+writing Housing.egg-info\PKG-INFO
+writing dependency_links to Housing.egg-info\dependency_links.txt
+writing requirements to Housing.egg-info\requires.txt
+writing top-level names to Housing.egg-info\top_level.txt
+writing manifest file 'Housing.egg-info\SOURCES.txt'
+reading manifest file 'Housing.egg-info\SOURCES.txt'
+writing manifest file 'Housing.egg-info\SOURCES.txt'
+running check
+creating Housing-1.0
+creating Housing-1.0\Housing.egg-info
+creating Housing-1.0\housing_predictor
+copying files to Housing-1.0...
+copying README.md -> Housing-1.0
+copying setup.cfg -> Housing-1.0
+copying setup.py -> Housing-1.0
+copying Housing.egg-info\PKG-INFO -> Housing-1.0\Housing.egg-info
+copying Housing.egg-info\SOURCES.txt -> Housing-1.0\Housing.egg-info
+copying Housing.egg-info\dependency_links.txt -> Housing-1.0\Housing.egg-info
+copying Housing.egg-info\requires.txt -> Housing-1.0\Housing.egg-info
+copying Housing.egg-info\top_level.txt -> Housing-1.0\Housing.egg-info
+copying housing_predictor\__init__.py -> Housing-1.0\housing_predictor
+copying housing_predictor\housing_predictor.py -> Housing-1.0\housing_predictor
+Writing Housing-1.0\setup.cfg
+creating C:\Users\NewVistas\Documents\Medic\.tox\dist
+creating 'C:\Users\NewVistas\Documents\Medic\.tox\dist\Housing-1.0.zip' and adding 'Housing-1.0' to it
+adding 'Housing-1.0\PKG-INFO'
+adding 'Housing-1.0\README.md'
+adding 'Housing-1.0\setup.cfg'
+adding 'Housing-1.0\setup.py'
+adding 'Housing-1.0\Housing.egg-info\dependency_links.txt'
+adding 'Housing-1.0\Housing.egg-info\PKG-INFO'
+adding 'Housing-1.0\Housing.egg-info\requires.txt'
+adding 'Housing-1.0\Housing.egg-info\SOURCES.txt'
+adding 'Housing-1.0\Housing.egg-info\top_level.txt'
+adding 'Housing-1.0\housing_predictor\housing_predictor.py'
+adding 'Housing-1.0\housing_predictor\__init__.py'
+removing 'Housing-1.0' (and everything under it)
+c:\users\newvistas\anaconda3\lib\site-packages\setuptools\pep425tags.py:89: RuntimeWarning: Config variable 'Py_DEBUG' is unset, Python ABI tag may be incorrect
+  warn=(impl == 'cp')):
+c:\users\newvistas\anaconda3\lib\site-packages\setuptools\pep425tags.py:93: RuntimeWarning: Config variable 'WITH_PYMALLOC' is unset, Python ABI tag may be incorrect
+  warn=(impl == 'cp')):
