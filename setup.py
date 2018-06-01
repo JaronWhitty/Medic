@@ -9,7 +9,7 @@ setup(name='Housing',
       url='https://github.com/JaronWhitty/Medic',
       license='MIT',
       setup_requires=['pytest-runner',],
-      tests_require=['pytest', 'python-coveralls', 'coveralls', 'coverage'],
+      tests_require=['pytest', 'python-coveralls',],
       install_requires=[
           "pandas",
           "sklearn",

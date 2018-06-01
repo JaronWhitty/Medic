@@ -1,17 +1,17 @@
 import pytest 
 import pandas as pd
-import housing_predictor as hp
+from housing_predictor import housing_predictor as hp
 
 
 @pytest.fixture
 def set_up_feature():
-    test = 'test.csv'
-    train = 'train.csv'
+    test = 'housing_predictor/data/test.csv'
+    train = 'housing_predictor/data/train.csv'
     return test, train
     
 def test_feature_engineering(set_up_feature):
     test, train = set_up_feature
-    final_train, final_test, train_ID = hp.feature_engineering(train, train)
+    final_train, final_test, train_ID = hp.feature_engineering(train, test)
     assert not pd.read_csv(test).empty
     assert type(pd.read_csv(test)) == pd.DataFrame
     housing_test = pd.read_csv(test)
@@ -28,7 +28,8 @@ def test_feature_engineering(set_up_feature):
   
 @pytest.fixture
 def set_up_prediction():
-    train, test, train_ID = hp.feature_engineering('train.csv', 'test.csv')
+    train, test, train_ID = hp.feature_engineering('housing_predictor/data/train.csv',
+                                                                     'housing_predictor/data/test.csv')
     return train, test, train_ID
     
 def test_prediction_maker(set_up_prediction):
